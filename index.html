@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compress JPG, PNG and WebP images online for free. Fast, private and browser-based image compression.">
+  <meta name="theme-color" content="#0b0d12">
+  <title>PixelShrink — Free Image Compressor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#">
+      <span class="brand-mark">P</span>
+      <span>Pixel<span>Shrink</span></span>
+    </a>
+    <nav>
+      <a href="#compressor">Compressor</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span></span> Fast · Private · Browser-based</div>
+      <h1>Make images <em>smaller.</em><br>Keep them beautiful.</h1>
+      <p>Compress JPG, PNG and WebP images directly in your browser. Your files never need to leave your device.</p>
+    </section>
+
+    <div class="ad-slot top-ad">
+      <span>ADVERTISEMENT</span>
+      <div>AdSense responsive ad</div>
+      <!-- Replace this placeholder with your approved Google AdSense code. -->
+    </div>
+
+    <section class="tool-card" id="compressor">
+      <div class="drop-zone" id="dropZone">
+        <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" multiple hidden>
+        <div class="upload-icon">↑</div>
+        <h2>Drop your images here</h2>
+        <p>or choose files from your device</p>
+        <button class="primary-btn" id="chooseBtn">Choose Images</button>
+        <div class="formats">JPG <b>•</b> PNG <b>•</b> WEBP · Up to 20 images</div>
+      </div>
+
+      <div class="settings hidden" id="settings">
+        <div class="settings-head">
+          <div>
+            <span class="label">Compression quality</span>
+            <strong id="qualityValue">80%</strong>
+          </div>
+          <button class="text-btn" id="clearBtn">Clear all</button>
+        </div>
+        <input type="range" id="quality" min="10" max="100" value="80">
+        <div class="range-labels"><span>Smaller file</span><span>Better quality</span></div>
+
+        <div class="format-row">
+          <span class="label">Output format</span>
+          <select id="format">
+            <option value="original">Keep original</option>
+            <option value="image/jpeg">JPG</option>
+            <option value="image/webp">WebP</option>
+            <option value="image/png">PNG</option>
+          </select>
+        </div>
+        <button class="compress-btn" id="compressBtn">Compress Images <span>→</span></button>
+      </div>
+
+      <div class="results hidden" id="results">
+        <div class="results-head">
+          <div><span class="label">Results</span><h2 id="resultSummary">Ready</h2></div>
+          <button class="download-all" id="downloadAll">Download all</button>
+        </div>
+        <div id="resultList"></div>
+      </div>
+    </section>
+
+    <div class="ad-slot middle-ad">
+      <span>ADVERTISEMENT</span>
+      <div>AdSense responsive ad</div>
+    </div>
+
+    <section class="stats">
+      <div><strong>100%</strong><span>Browser based</span></div>
+      <div><strong>0</strong><span>Uploads to server</span></div>
+      <div><strong>3</strong><span>Popular formats</span></div>
+      <div><strong>Free</strong><span>To use</span></div>
+    </section>
+
+    <section class="info-grid" id="how-it-works">
+      <div>
+        <span class="number">01</span>
+        <h3>Choose images</h3>
+        <p>Drag and drop your JPG, PNG or WebP files into the compressor.</p>
+      </div>
+      <div>
+        <span class="number">02</span>
+        <h3>Set quality</h3>
+        <p>Pick the balance between smaller file size and visual quality.</p>
+      </div>
+      <div>
+        <span class="number">03</span>
+        <h3>Download</h3>
+        <p>Download your compressed files instantly, without waiting for a server.</p>
+      </div>
+    </section>
+
+    <section class="privacy" id="privacy">
+      <div class="shield">✓</div>
+      <div>
+        <h2>Your images stay on your device.</h2>
+        <p>PixelShrink performs compression locally using your browser. Images are not uploaded to a PixelShrink server.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">PixelShrink</div>
+    <p>Fast image compression, without the upload.</p>
+    <div class="footer-links"><a href="#privacy">Privacy</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></div>
+    <small>© 2026 PixelShrink. All rights reserved.</small>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
